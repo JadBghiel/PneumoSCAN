@@ -1,0 +1,70 @@
+# venv
+.venv/
+venv/
+env/
+ENV/
+
+# py
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# ipynb
+.ipynb_checkpoints
+*/.ipynb_checkpoints/*
+
+# IPython
+profile_default/
+ipython_config.py
+
+# pyenv
+.python-version
+
+# env
+.env
+.venv
+ENV/
+env.bak/
+venv.bak/
+
+# ide
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# testing
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.hypothesis/
+test/
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# data
+# *.csv

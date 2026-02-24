@@ -70,5 +70,4 @@ dmypy.json
 # *.csv
 
 # others
-*.pdf
-*.txt
+doc/

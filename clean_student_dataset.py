@@ -5,6 +5,8 @@
 ## clean_student_dataset
 ##
 
+import csv
+
 import pandas as pd
 
 PATH = "rsrc/Student_Dataset.csv"
@@ -35,9 +37,16 @@ def add_proper_new_column():
     df = pd.read_csv(CLEAN_FILE_PATH)
     #now to append the colum ColourCode with the value 0x000000 for all rows
     df["ColourCode"] = "0x000000" #this works good, it adds the column with the value for all rows
-    #now some of the description are closed with quotes and some are not, we need to add them to all descriptions, we can use the apply function to add quotes to all descriptions
-    df["Description"] = df["Description"].apply(lambda x: f'"{x}"' if not x.startswith('"') else x) #this will add quotes to all descriptions that do
-    df.to_csv(CLEAN_FILE_PATH, index=False)
+    
+    # Remove any existing surrounding quotes in Description
+    df["Description"] = df["Description"].str.strip('"')
+
+    # Let pandas handle quoting properly
+    df.to_csv(
+        CLEAN_FILE_PATH,
+        index=False,
+        quoting=csv.QUOTE_MINIMAL  # ensures exactly one pair of quotes
+    )
 
 if __name__ == "__main__":
     clean_student_dataset()

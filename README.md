@@ -53,3 +53,9 @@ MiSSING these:
 - model quality and insight: have a propse solution for the classifed problem
 - have gained insight on the issue of our dataset
 - reference real research on the topic of the dataset
+- on the unseorived part we need to jusityf the clusters, need to choose how many cluster not random its a stander do research and jusutfu the number f clusters (5 i think its between 5 and 10)
+- unsupervied: at least 4 improvements, that can be shown and explained/jusitife din the notebook
+- use the ideal number of clusters NOT 5
+- put unseend data in the new clusters, can u write a new testiminy of tbe new clsuter ? do these eperiemnt 5 times
+- using only the easy data in 9 clusters, what % of the easy data are we able to cluster correclty ? 
+-   

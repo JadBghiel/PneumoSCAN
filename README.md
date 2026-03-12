@@ -58,4 +58,5 @@ MiSSING these:
 - use the ideal number of clusters NOT 5
 - put unseend data in the new clusters, can u write a new testiminy of tbe new clsuter ? do these eperiemnt 5 times
 - using only the easy data in 9 clusters, what % of the easy data are we able to cluster correclty ? 
--   
+
+## THE NOTEBOOK MUST BE THROG PLEASE MAKE IT AS COPLETE AS POSSIBLE AND GOOD LOOKING AND USE MATPLOTLIB AND ERROR MESSAGE AND OUTPUT WELL DONE PLEASE

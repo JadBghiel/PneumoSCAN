@@ -35,9 +35,21 @@ here is a geekforgeek tutorial on how to do it:
 
 
 
-# DEFENSE TODO
+# DEFENSE TODO for tasl 1 and 2
 - well structured
 - can be flowed throuhg w/ errors
 - each aprt of the notebook ahve explanation, codeblack vizualiton and output
 - matplotlib use need to be beautiful
 - please respecr the notebook
+
+MiSSING these:
+- at least 3 model on the same dataset (add regression) and eplxained the best chouce in the notebook
+- re push the old dataset ??
+- give a good exlpantion on how the selected model perform and why we choose it
+- give a good explanation on its loss function
+- touch on other aspect a part from the accuracy result, the speed etc 
+- do eveyting for every model of everytask documented well everything
+- compare our notebook with other people notebook i have link: jad do it
+- model quality and insight: have a propse solution for the classifed problem
+- have gained insight on the issue of our dataset
+- reference real research on the topic of the dataset

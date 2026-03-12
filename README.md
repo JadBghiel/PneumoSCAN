@@ -18,7 +18,7 @@ i first tested with the random tree permutation model, but that performed increa
 The model would simply pick one disease at random, (usually the one that i gave that had the most examples), and simply say that every image had this disease.
 To avoid this, i went back to svc search since it had performed so well when faced with binary decisions. to avoid confusing it with multiple decisions, as i would surely have to do if i put all 14 options (13 diseases + no disease), i reduced it to 3 options (disease_1, disease_2, no disease).
 
-Maybe it worked, maybe it didn't, i don't know, its still training.
+It got 51% (so better than random since random would be 33%)
 
 
 

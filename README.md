@@ -34,3 +34,10 @@ here is a geekforgeek tutorial on how to do it:
 [tutorial_link](https://www.geeksforgeeks.org/machine-learning/clustering-text-documents-using-k-means-in-scikit-learn/)
 
 
+
+# DEFENSE TODO
+- well structured
+- can be flowed throuhg w/ errors
+- each aprt of the notebook ahve explanation, codeblack vizualiton and output
+- matplotlib use need to be beautiful
+- please respecr the notebook

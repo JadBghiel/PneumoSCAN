@@ -3,22 +3,11 @@
 ## task 1
 
 
-run the image_classification.ipynb
+run the [image_classification_pneumonia](Supervised/image_classification_pneumonia.ipynb) file
+- it has 3 model (one of them k=5 clusters)
+- with clear viz and output
+- its done
 
-when testing on things like pneuomina, whic only have a yes or no and are pretty easy to check even with the naked eye if the patient has pneumonia, we can easily acheive accuracy of up to 96%.
-
-However, when checking images that have multipe choices (meaning that it can be multiple deceases, not just sick or not sick), things get much more complex, much more quickly. With these types of images, i struggle to get even above 50% accuracy, even with huge datasets and long training times.
-
-I decided to check chest images, because contrary to the rest, they havequite a few options, and sometimes, a patient can have multile diseases at once, greatly increasing complexity, so that seemed like a func challenge.
-
-
-I then tested with multiple different ways of train ing ml to see what performed best.
-
-i first tested with the random tree permutation model, but that performed increadibly badlly.
-The model would simply pick one disease at random, (usually the one that i gave that had the most examples), and simply say that every image had this disease.
-To avoid this, i went back to svc search since it had performed so well when faced with binary decisions. to avoid confusing it with multiple decisions, as i would surely have to do if i put all 14 options (13 diseases + no disease), i reduced it to 3 options (disease_1, disease_2, no disease).
-
-It got 51% (so better than random since random would be 33%)
 
 
 
@@ -47,13 +36,18 @@ MiSSING these:
 - re push the old dataset ??
 - give a good exlpantion on how the selected model perform and why we choose it
 - give a good explanation on its loss function
-- touch on other aspect a part from the accuracy result, the speed etc 
+- touch on other aspect a part from the accuracy result, the speed etc (explain in the markdown)
 - do eveyting for every model of everytask documented well everything
-- compare our notebook with other people notebook i have link: jad do it
+- compare our notebook with other people notebook i have link: jad do it (find another model online that does the same thing in this case for task 1: supervised its finding diseases in the chest IRM imagery)
 - model quality and insight: have a propse solution for the classifed problem
 - have gained insight on the issue of our dataset
 - reference real research on the topic of the dataset
-- on the unseorived part we need to jusityf the clusters, need to choose how many cluster not random its a stander do research and jusutfu the number f clusters (5 i think its between 5 and 10)
+- on the unsuprvised part we need to jusityf the clusters, need to choose how many cluster not random its a stander do research and jusutfu the number of clusters (we need 1 model with 5 clusters) the rest can have whatver its fine no need to overdo it 
+- when possible after each codeblock have a matplotlib visuatltion and the output and a markdown explaining it (the things i said before such as the speed the accuracy any notes etc)
+
+
+
+
 - unsupervied: at least 4 improvements, that can be shown and explained/jusitife din the notebook
 - use the ideal number of clusters NOT 5
 - put unseend data in the new clusters, can u write a new testiminy of tbe new clsuter ? do these eperiemnt 5 times

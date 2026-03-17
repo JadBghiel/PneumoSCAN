@@ -2,6 +2,8 @@
 
 ## task 1
 
+note: i put the old multi class [notebook](Supervised/image_classification_supervised.ipynb) in gitignore as we no longer need it everything is in the supervisd file (3 models and 1 for )
+
 
 run the [image_classification_pneumonia](Supervised/image_classification_pneumonia.ipynb) file
 - it has 3 model (one of them k=5 clusters)

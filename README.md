@@ -56,3 +56,17 @@ MiSSING these:
 - using only the easy data in 9 clusters, what % of the easy data are we able to cluster correclty ? 
 
 ## THE NOTEBOOK MUST BE THROG PLEASE MAKE IT AS COPLETE AS POSSIBLE AND GOOD LOOKING AND USE MATPLOTLIB AND ERROR MESSAGE AND OUTPUT WELL DONE PLEASE
+
+
+# SECOND FOLLOW UP TODO FOR THE FINAL DEFENSE:
+SUPERVISED: JAD
+- explain in more details how the models works conceptually, the more info and explanation the better
+- explain better the loss function
+- metion that online notebook with for penumnia 
+- provide context of the disease, a bit of info, les enjeux
+
+UNSUPERVISED: ALRIK
+- add a desc 
+- how do i measure my success ? -> add a seciton to epxlain - silouhette score like guess how many diff clusters
+- at least presnt 4 improvements made during the training that improved the result (rn we have 2 add 2 more)
+- uses the correct amount of clusters (we guessed 19), its less than 19, oriol hinted at 9 cluster, he finna give a csv file with 9 clusters apparently

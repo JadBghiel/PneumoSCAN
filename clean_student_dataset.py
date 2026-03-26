@@ -30,7 +30,7 @@ def clean_student_dataset():
         cleaned_lines.append(cleaned_line)
 
     with open(CLEAN_FILE_PATH, "w") as file: # ineed to create or truncate the file before writing
-        file.write("Id,Description\n") # write the header
+        file.write("Id,DiseaseSymptom\n") # write the header
         file.write("\n".join(cleaned_lines))
 
 def add_proper_new_column():
@@ -38,8 +38,8 @@ def add_proper_new_column():
     #now to append the colum ColourCode with the value 0x000000 for all rows
     df["ColourCode"] = "0x000000" #this works good, it adds the column with the value for all rows
     
-    # Remove any existing surrounding quotes in Description
-    df["Description"] = df["Description"].str.strip('"')
+    # Remove any existing surrounding quotes in DiseaseSymptom
+    df["DiseaseSymptom"] = df["DiseaseSymptom"].str.strip('"')
 
     # Let pandas handle quoting properly
     df.to_csv(

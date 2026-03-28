@@ -64,6 +64,7 @@ SUPERVISED: JAD
 - explain better the loss function
 - metion that online notebook with for penumnia 
 - provide context of the disease, a bit of info, les enjeux
+## jad: done
 
 UNSUPERVISED: ALRIK
 - add a desc 

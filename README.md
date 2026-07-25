@@ -1,73 +1,83 @@
-# CVRIE
+# PneumoSCAN
 
-## task 1
+A machine-learning project exploring both **supervised** and **unsupervised** learning
+on medical data. It combines an image-classification pipeline that detects pneumonia
+from chest X-ray imagery with an unsupervised clustering study over free-text symptom
+descriptions.
 
-note: i put the old multi class [notebook](Supervised/image_classification_supervised.ipynb) in gitignore as we no longer need it everything is in the supervisd file (3 models and 1 for )
+The work is organized as two self-contained Jupyter notebooks, each documented inline
+with explanations, visualizations, and model comparisons.
 
+---
 
-run the [image_classification_pneumonia](Supervised/image_classification_pneumonia.ipynb) file
-- it has 3 model (one of them k=5 clusters)
-- with clear viz and output
-- its done
+## Overview
 
+| Part | Task | Approach |
+|------|------|----------|
+| **Supervised**   | Classify chest X-ray images (normal vs. pneumonia) | Multiple classification models trained and compared on the same dataset |
+| **Unsupervised** | Group free-text symptom reports into clusters | Text vectorization + K-Means clustering, with cluster-count justification |
 
+## Repository layout
 
+```
+.
+├── Supervised/
+│   └── image_classification_pneumonia&blood.ipynb   image classification models
+├── Unsupervised/
+│   └── Unsupervised_first.ipynb                      text clustering study
+├── extract_dataset.py        unpacks .npy image/label arrays into per-class PNG folders
+├── clean_student_dataset.py  normalizes the raw symptom-text CSV
+└── rsrc/                      datasets (student symptom CSVs, Iris reference set)
+```
 
+## Supervised — pneumonia detection
 
+The supervised notebook trains and compares several classification models on the same
+chest X-ray dataset, then discusses model selection: not only accuracy but also the
+loss function, training/inference speed, and the trade-offs behind the chosen model.
+It provides medical context on the condition being detected and situates the results
+against published work on the same problem.
 
-## task 2
+`extract_dataset.py` prepares the image data — it loads `train_images.npy` /
+`train_labels.npy`, maps labels to class names (`normal`, `pneumonia`), and writes the
+images out as PNGs into per-class folders suitable for image-classification pipelines.
 
-here is documentation on how to group text using scikit
-[docs_link](https://scikit-learn.org/stable/auto_examples/text/plot_document_clustering.html)
+## Unsupervised — symptom clustering
 
-here is a geekforgeek tutorial on how to do it:
+The unsupervised notebook groups free-text symptom descriptions into clusters using text
+vectorization and K-Means. It measures cluster quality (e.g. silhouette score) to justify
+the number of clusters rather than picking one arbitrarily, presents the improvements made
+during experimentation, and tests the clustering by assigning unseen reports to the
+learned clusters.
 
-[tutorial_link](https://www.geeksforgeeks.org/machine-learning/clustering-text-documents-using-k-means-in-scikit-learn/)
+`clean_student_dataset.py` preprocesses the raw symptom CSV (`rsrc/Student_Dataset.csv`)
+into a cleaned version (`rsrc/Student_Dataset_Clean.csv`) by stripping placeholder tokens
+and normalizing each row.
 
+## Getting started
 
+The project uses the standard Python data-science stack.
 
-# DEFENSE TODO for tasl 1 and 2
-- well structured
-- can be flowed throuhg w/ errors
-- each aprt of the notebook ahve explanation, codeblack vizualiton and output
-- matplotlib use need to be beautiful
-- please respecr the notebook
+```bash
+pip install numpy pandas pillow scikit-learn matplotlib jupyter
 
-MiSSING these:
-- at least 3 model on the same dataset (add regression) and eplxained the best chouce in the notebook
-- re push the old dataset ??
-- give a good exlpantion on how the selected model perform and why we choose it
-- give a good explanation on its loss function
-- touch on other aspect a part from the accuracy result, the speed etc (explain in the markdown)
-- do eveyting for every model of everytask documented well everything
-- compare our notebook with other people notebook i have link: jad do it (find another model online that does the same thing in this case for task 1: supervised its finding diseases in the chest IRM imagery)
-- model quality and insight: have a propse solution for the classifed problem
-- have gained insight on the issue of our dataset
-- reference real research on the topic of the dataset
-- on the unsuprvised part we need to jusityf the clusters, need to choose how many cluster not random its a stander do research and jusutfu the number of clusters (we need 1 model with 5 clusters) the rest can have whatver its fine no need to overdo it 
-- when possible after each codeblock have a matplotlib visuatltion and the output and a markdown explaining it (the things i said before such as the speed the accuracy any notes etc)
+# prepare data (supervised part, expects the .npy arrays under dataset/)
+python extract_dataset.py
 
+# clean the symptom text data (unsupervised part)
+python clean_student_dataset.py
 
+# then open the notebooks
+jupyter notebook
+```
 
+Open the notebook for the part you want to explore:
+- `Supervised/image_classification_pneumonia&blood.ipynb`
+- `Unsupervised/Unsupervised_first.ipynb`
 
-- unsupervied: at least 4 improvements, that can be shown and explained/jusitife din the notebook
-- use the ideal number of clusters NOT 5
-- put unseend data in the new clusters, can u write a new testiminy of tbe new clsuter ? do these eperiemnt 5 times
-- using only the easy data in 9 clusters, what % of the easy data are we able to cluster correclty ? 
+## Project context
 
-## THE NOTEBOOK MUST BE THROG PLEASE MAKE IT AS COPLETE AS POSSIBLE AND GOOD LOOKING AND USE MATPLOTLIB AND ERROR MESSAGE AND OUTPUT WELL DONE PLEASE
-
-
-# SECOND FOLLOW UP TODO FOR THE FINAL DEFENSE:
-SUPERVISED: JAD
-- explain in more details how the models works conceptually, the more info and explanation the better
-- explain better the loss function
-- metion that online notebook with for penumnia 
-- provide context of the disease, a bit of info, les enjeux
-## jad: done
-
-UNSUPERVISED: ALRIK
-- add a desc 
-- how do i measure my success ? -> add a seciton to epxlain - silouhette score like guess how many diff clusters
-- at least presnt 4 improvements made during the training that improved the result (rn we have 2 add 2 more)
-- uses the correct amount of clusters (we guessed 19), its less than 19, oriol hinted at 9 cluster, he finna give a csv file with 9 clusters apparently
+Developed as part of the EPITECH curriculum (second year). The goal is to demonstrate a
+full workflow for both learning paradigms: data preparation, model training and
+comparison, quantitative evaluation, and interpretation of the results in the context of
+the underlying medical problem.
